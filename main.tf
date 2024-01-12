@@ -55,7 +55,7 @@ resource "aws_iam_role_policy_attachment" "rds_monitoring_policy" {
 }
 
 resource "aws_db_subnet_group" "selected" {
-  name       = "default-${data.aws_vpc.selected.id}"
+  name       = "default-${data.aws_vpc.selected.id}-${var.project}"
   subnet_ids = data.aws_subnet_ids.selected.ids
   tags       = local.custom_tags
 }
