@@ -1,0 +1,12 @@
+env                     = "testing"
+project                 = "my-rds-test"
+master_username         = "dbadmin"
+master_password         = "Ramd0mStr1gn$"
+engine_version          = "12.16"
+backup_window           = "15:01-16:01"
+maintenance_window      = "sun:01:00-sun:01:30"
+apply_immediately       = true
+publicly_accessible     = true
+deletion_protection     = false
+
+

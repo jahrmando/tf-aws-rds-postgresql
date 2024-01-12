@@ -1,0 +1,36 @@
+formatter: "markdown table" # this is required
+
+header-from: main.tf
+
+recursive:
+  enabled: false
+
+output:
+  file: README.md
+  mode: inject
+  template: |-
+    <!-- BEGIN_TF_DOCS -->
+    {{ .Content }}
+
+    # Copyright
+    Copyright © 2024 [Armando Uch](https://armanroot.com)
+    <!-- END_TF_DOCS -->
+
+sort:
+  enabled: true
+  by: name
+
+settings:
+  anchor: true
+  color: true
+  default: true
+  description: false
+  escape: true
+  hide-empty: false
+  html: true
+  indent: 2
+  lockfile: true
+  read-comments: true
+  required: true
+  sensitive: true
+  type: true
